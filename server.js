@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 app.use(cors());
 
-
+const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.get('/',(req,res)=>{
@@ -59,6 +59,6 @@ app.post('/send', (req, res) => {
   });
   });
 
-app.listen(5000,()=>{
+app.listen(PORT,()=>{
     console.log('server started at 5000');
 })
