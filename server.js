@@ -26,12 +26,12 @@ app.post('/send', (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: 'mail.yetfix.com',
+    host: '',
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-        user: 'kawsar@yetfix.com', // generated ethereal user
-        pass: 'kawsar@faru20192041'  // generated ethereal password
+        user: '', // generated ethereal user
+        pass: ''  // generated ethereal password
     },
     tls:{
       rejectUnauthorized:false
